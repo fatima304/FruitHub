@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/Home/home_screen.dart';
 import 'package:fruit_hub/AddBasket/widgets/back_button.dart';
+
 
 class ImageSection extends StatelessWidget {
   const ImageSection({super.key});
@@ -11,7 +13,14 @@ class ImageSection extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const CustomBackButton(),
+           CustomBackButton(onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomeScreen(),
+              ),
+            );
+          },),
           Flexible(
             child: Container(
               width: double.infinity,

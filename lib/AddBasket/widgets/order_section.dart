@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:fruit_hub/OrderList/order_list_screen.dart';
 import 'package:fruit_hub/WelcomeScreen/widgets/button.dart';
 
 class OrderSection extends StatelessWidget {
@@ -30,7 +31,14 @@ class OrderSection extends StatelessWidget {
               Button(
                   buttonSize: 250,
                   textButton: 'Add to basket',
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OrderListScreen(),
+                      ),
+                    );
+                  }),
             ],
           ),
         ],

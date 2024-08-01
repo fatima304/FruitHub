@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/AddBasket/add_basket_screen.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/AddBasket/widgets/back_button.dart';
 
 class CustomBar extends StatelessWidget {
-  const CustomBar({super.key});
+  const CustomBar({super.key, required this.textBar});
+
+  final String textBar;
 
   @override
   Widget build(BuildContext context) {
@@ -12,19 +15,28 @@ class CustomBar extends StatelessWidget {
       decoration: const BoxDecoration(
         color: ColorStyle.primayColor,
       ),
-      child: const Row(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CustomBackButton(),
-          SizedBox(
+          CustomBackButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AddBasketScreen(),
+                ),
+              );
+            },
+          ),
+          const SizedBox(
             width: 30,
           ),
           Text(
-            'My Basket',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w600,
+            textBar,
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w500,
               color: Colors.white,
             ),
           ),

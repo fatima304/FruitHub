@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/AddBasket/widgets/price_section.dart';
+import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/AddBasket/widgets/count_section.dart';
 
 class AmountSection extends StatelessWidget {
@@ -13,7 +13,14 @@ class AmountSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CountSection(),
-        PriceSection(),
+        Text(
+          '₦ 2,000',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
+            color: ColorStyle.textColor,
+          ),
+        ),
       ],
     );
   }

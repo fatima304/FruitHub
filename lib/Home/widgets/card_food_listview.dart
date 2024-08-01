@@ -1,11 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/models/food_model.dart';
 import 'package:fruit_hub/Home/widgets/food_card.dart';
 
 // ignore: must_be_immutable
 class CardFoodListview extends StatelessWidget {
-  CardFoodListview({super.key});
+  CardFoodListview();
+
 
   List<CardModel> foodModel = [
     CardModel(

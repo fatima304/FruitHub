@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
-import 'package:fruit_hub/Home/home_screen.dart';
 
+// ignore: must_be_immutable
 class CustomBackButton extends StatelessWidget {
-  const CustomBackButton({
+   CustomBackButton({ required this.onPressed,
     super.key,
   });
+   void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -13,21 +14,15 @@ class CustomBackButton extends StatelessWidget {
       children: [
         ElevatedButton.icon(
           style: const ButtonStyle(
+            fixedSize: WidgetStatePropertyAll(Size(120, 35)),
             backgroundColor: WidgetStatePropertyAll(Colors.white),
           ),
           icon: Image.asset('assets/arrow.png'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HomeScreen(),
-              ),
-            );
-          },
+          onPressed: onPressed,
           label: const Text(
             'Go back',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: ColorStyle.textColor,
             ),

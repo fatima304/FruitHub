@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/AddBasket/add_basket_screen.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/Home/widgets/search_bar.dart';
 
@@ -27,10 +28,17 @@ class HeaderSection extends StatelessWidget {
               child: CustomSearchBar(),
             ),
             const SizedBox(width: 10),
-            Image.asset(
-              'assets/setting.png',
-              width: 26,
-              height: 17,
+            GestureDetector(onTap: (){  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AddBasketScreen(),
+                      ),
+                    );},
+              child: Image.asset(
+                'assets/setting.png',
+                width: 26,
+                height: 17,
+              ),
             ),
           ],
         ),

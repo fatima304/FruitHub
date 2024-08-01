@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Home/widgets/custom_appbar.dart';
+import 'package:fruit_hub/Home/widgets/food_category_tab_view.dart';
 import 'package:fruit_hub/Home/widgets/header_section.dart';
 import 'package:fruit_hub/Home/widgets/recommend_section.dart';
 
@@ -8,26 +9,29 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xfff8f8f8),
-      body: Padding(
-        padding: EdgeInsets.only(left: 20, right: 20, top: 45, bottom: 15),
-        child: Column(
-          children: [
-            CustomAppBar(),
-            SizedBox(
-              height: 15,
-            ),
-            HeaderSection(),
-            SizedBox(
-              height: 25,
-            ),
-            RecommendSection(),
-            SizedBox(
-              height: 15,
-            ),
-            // CategorySection(),
-          ],
+    return Scaffold(
+      backgroundColor: const Color(0xfff8f8f8),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding:
+              const EdgeInsets.only(left: 10, right: 10, top: 45, bottom: 15),
+          child: Column(
+            children: [
+              const CustomAppBar(),
+              const SizedBox(
+                height: 15,
+              ),
+              const HeaderSection(),
+              const SizedBox(
+                height: 25,
+              ),
+              const RecommendSection(),
+              const SizedBox(
+                height: 15,
+              ),
+              FoodCategoryTabView(),
+            ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/OrderList/order_list_screen.dart';
+import 'package:fruit_hub/SplashScreen/screens/splashscreen.dart';
 
 void main() {
   runApp(
@@ -20,7 +20,7 @@ class FruitHub extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const OrderListScreen(),
+      home: const SplashScreen(),
     );
   }
 }
