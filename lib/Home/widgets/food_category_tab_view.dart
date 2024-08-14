@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/models/food_model.dart';
 import 'package:fruit_hub/Home/widgets/card_food_listview.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FoodCategoryTabView extends StatelessWidget {
   final List<String> categories = ['Hottest', 'Popular', 'New combo', 'Top'];
@@ -56,13 +57,13 @@ class FoodCategoryTabView extends StatelessWidget {
             dividerHeight: 0,
             isScrollable: true,
             labelColor: ColorStyle.textColor,
-            labelStyle: const TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w500,
+            labelStyle: GoogleFonts.darkerGrotesque(
+              fontSize: 24,
+              fontWeight: FontWeight.w600,
             ),
-            unselectedLabelStyle: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
+            unselectedLabelStyle: GoogleFonts.darkerGrotesque(
+              fontSize: 17,
+              fontWeight: FontWeight.w500,
             ),
             unselectedLabelColor: Colors.grey,
             indicator: const UnderlineTabIndicator(

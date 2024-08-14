@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/OrderList/order_list_screen.dart';
 import 'package:fruit_hub/WelcomeScreen/widgets/button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OrderSection extends StatelessWidget {
   const OrderSection({super.key});
@@ -13,11 +14,11 @@ class OrderSection extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
+          Text(
             'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make',
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
+            style: GoogleFonts.darkerGrotesque(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
               color: ColorStyle.textColor,
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/Home/widgets/card_food_listview.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RecommendSection extends StatelessWidget {
   const RecommendSection({super.key});
@@ -12,11 +13,11 @@ class RecommendSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Recommended Combo',
-            style: TextStyle(
-              fontSize: 21,
-              fontWeight: FontWeight.w500,
+            style: GoogleFonts.darkerGrotesque(
+              fontSize: 25,
+              fontWeight: FontWeight.w700,
               color: ColorStyle.textColor,
             ),
           ),

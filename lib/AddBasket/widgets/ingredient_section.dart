@@ -1,38 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class IngredientSection extends StatelessWidget {
   const IngredientSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: 24),
+    return Padding(
+      padding: const EdgeInsets.only(left: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'One Pack Contains:',
-            style: TextStyle(
-              fontSize: 19,
-              fontWeight: FontWeight.w500,
+            style: GoogleFonts.darkerGrotesque(
+              fontSize: 23,
+              fontWeight: FontWeight.w600,
               color: ColorStyle.textColor,
             ),
           ),
-          Divider(
+          const Divider(
             thickness: 2,
             indent: 3,
             endIndent: 160,
             color: ColorStyle.primayColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             'Red Quinoa, Lime, Honey, Blueberries, Strawberries, Mango, Fresh mint.',
-            style: TextStyle(
+            style: GoogleFonts.darkerGrotesque(
               fontSize: 16,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
               color: ColorStyle.textColor,
             ),
           ),

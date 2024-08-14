@@ -5,17 +5,19 @@ import 'package:fruit_hub/AddBasket/widgets/count_section.dart';
 class AmountSection extends StatelessWidget {
   const AmountSection({
     super.key,
+    required this.price,
   });
+  final String price;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CountSection(),
+        const CountSection(),
         Text(
-          '₦ 2,000',
-          style: TextStyle(
+          '₦ $price',
+          style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w400,
             color: ColorStyle.textColor,

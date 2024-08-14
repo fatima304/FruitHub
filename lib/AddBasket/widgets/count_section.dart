@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CountSection extends StatelessWidget {
   const CountSection({
@@ -18,11 +19,11 @@ class CountSection extends StatelessWidget {
         const SizedBox(
           width: 20,
         ),
-        const Text(
+        Text(
           '1',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w400,
+          style: GoogleFonts.darkerGrotesque(
+            fontSize: 30,
+            fontWeight: FontWeight.w500,
             color: ColorStyle.textColor,
           ),
         ),

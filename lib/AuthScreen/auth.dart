@@ -7,20 +7,24 @@ class AuthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            flex: 4,
-            child: BigContainer(
-              mainImage: 'assets/basket2.png',
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            const Expanded(
+              flex: 4,
+              child: BigContainer(
+                mainImage: 'assets/basket2.png',
+              ),
             ),
-          ),
-          Expanded(
-            flex: 3,
-            child: SmallContainerOrder(),
-          ),
-        ],
+            Expanded(
+              flex: 3,
+              child: SingleChildScrollView(
+                child: SmallContainerOrder(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

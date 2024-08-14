@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/WelcomeScreen/screens/welcome.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 10), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => const WelcomeScreen(),
@@ -45,10 +46,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   bottomRight: Radius.circular(15),
                 ),
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   'Fruit Hub',
-                  style: TextStyle(
+                  style: GoogleFonts.badScript(
                     fontSize: 24,
                     fontStyle: FontStyle.italic,
                     color: Colors.white,

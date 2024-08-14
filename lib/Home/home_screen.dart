@@ -5,7 +5,9 @@ import 'package:fruit_hub/Home/widgets/header_section.dart';
 import 'package:fruit_hub/Home/widgets/recommend_section.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required this.enteredText});
+
+  final String enteredText;
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +16,15 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 10, right: 10, top: 45, bottom: 15),
+              const EdgeInsets.only(left: 12, right: 12, top: 45, bottom: 15),
           child: Column(
             children: [
               const CustomAppBar(),
               const SizedBox(
                 height: 15,
               ),
-              const HeaderSection(),
+              // Pass the entered text to HeaderSection
+              HeaderSection(enteredText: enteredText),
               const SizedBox(
                 height: 25,
               ),

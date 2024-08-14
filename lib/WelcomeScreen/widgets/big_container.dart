@@ -13,7 +13,7 @@ class BigContainer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(35),
       width: double.infinity,
-      color:  ColorStyle.primayColor,
+      color: ColorStyle.primayColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -25,10 +25,12 @@ class BigContainer extends StatelessWidget {
               height: 37.52,
             ),
           ),
-          Image.asset(
-            mainImage,
-            width: 301,
-            height: 260,
+          Flexible(
+            child: Image.asset(
+              mainImage,
+              width: 301,
+              height: 260,
+            ),
           ),
           const SizedBox(
             height: 10,

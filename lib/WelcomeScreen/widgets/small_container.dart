@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/AuthScreen/auth.dart';
 import 'package:fruit_hub/WelcomeScreen/widgets/button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SmallContainer extends StatelessWidget {
   const SmallContainer({
@@ -24,21 +25,21 @@ class SmallContainer extends StatelessWidget {
         children: [
           Text(
             text,
-            style: const TextStyle(
-              fontSize: 20,
+            style: GoogleFonts.darkerGrotesque(
+              fontSize: 23,
               color: ColorStyle.textColor,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(
             height: 5,
           ),
-          const Text(
+          Text(
             'We deliver the best and freshest fruit salad in town. Order for a combo today!!!',
-            style: TextStyle(
-              fontSize: 16,
-              color: Color(0xff5d577e),
-              fontWeight: FontWeight.w400,
+            style: GoogleFonts.darkerGrotesque(
+              fontSize: 19,
+              color: const Color(0xff5d577e),
+              fontWeight: FontWeight.w500,
             ),
           ),
           const SizedBox(

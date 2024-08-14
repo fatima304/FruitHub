@@ -1,38 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextComplete extends StatelessWidget {
   const TextComplete({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           'Congratulations!!!',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w500,
+          style: GoogleFonts.darkerGrotesque(
+            fontSize: 32,
+            fontWeight: FontWeight.w600,
             color: ColorStyle.textColor,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Text(
           'Your order have been taken and',
-          style: TextStyle(
+          style: GoogleFonts.darkerGrotesque(
             fontSize: 20,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             color: ColorStyle.textColor,
           ),
         ),
         Text(
           'is being attended to',
-          style: TextStyle(
+          style: GoogleFonts.darkerGrotesque(
             fontSize: 20,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             color: ColorStyle.textColor,
           ),
         ),

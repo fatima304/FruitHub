@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Complete/widgets/outline_button.dart';
 import 'package:fruit_hub/Complete/widgets/text_complete.dart';
+import 'package:fruit_hub/TrackOrder/track_screen.dart';
 import 'package:fruit_hub/WelcomeScreen/widgets/button.dart';
 
 class CompleteScreen extends StatelessWidget {
@@ -10,17 +11,27 @@ class CompleteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.all(50.0),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset('assets/complete.png'),
             const TextComplete(),
             Button(
-                textButton: 'Track order', onPressed: () {}, buttonSize: 155),
-            const OutLineButton(
-                textButton: 'Continue shopping', buttonSize: 190),
+                textButton: 'Track order',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TrackOrderScreen(),
+                    ),
+                  );
+                },
+                buttonSize: 155),
+            OutLineButton(
+                textButton: 'Continue shopping',
+                buttonSize: 190,
+                onPressed: () {}),
           ],
         ),
       ),

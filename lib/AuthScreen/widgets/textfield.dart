@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextForm extends StatelessWidget {
-  const TextForm({super.key});
+  const TextForm({
+    super.key,
+    required this.hintText,
+    required this.controller,
+  });
+
+  final String hintText;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       cursorColor: Colors.black,
       decoration: InputDecoration(
-        hintText: 'Tony',
+        hintText: hintText,
         filled: true,
         fillColor: const Color(0xffF3F1F1),
-        hintStyle: const TextStyle(
-          fontSize: 20,
-          color: Color(0xffC2BDBD),
-          fontWeight: FontWeight.w400,
+        hintStyle: GoogleFonts.darkerGrotesque(
+          fontSize: 21,
+          color: const Color(0xffC2BDBD),
+          fontWeight: FontWeight.w500,
         ),
-        border: InputBorder.none,
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(10),
+        ),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: ColorStyle.primayColor,
@@ -25,7 +37,7 @@ class TextForm extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         contentPadding:
-            const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       ),
     );
   }

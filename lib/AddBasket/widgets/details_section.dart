@@ -4,7 +4,13 @@ import 'package:fruit_hub/AddBasket/widgets/ingredient_section.dart';
 import 'package:fruit_hub/AddBasket/widgets/order_section.dart';
 
 class DetailsSection extends StatelessWidget {
-  const DetailsSection({super.key});
+  const DetailsSection({
+    super.key,
+    required this.price,
+    required this.foodName,
+  });
+  final String price;
+  final String foodName;
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +24,22 @@ class DetailsSection extends StatelessWidget {
           topRight: Radius.circular(16),
         ),
       ),
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          FoodAmount(),
-          Divider(
+          FoodAmount(
+            price: price,
+            foodName: foodName,
+          ),
+          const Divider(
             color: Color(0xffF3F3F3),
           ),
-          IngredientSection(),
-          Divider(
+          const IngredientSection(),
+          const Divider(
             color: Color(0xffF3F3F3),
           ),
-          OrderSection(),
+          const OrderSection(),
         ],
       ),
     );

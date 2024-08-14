@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -17,15 +18,15 @@ class CustomAppBar extends StatelessWidget {
         Column(
           children: [
             Image.asset(
-              width: 24,
-              height: 24,
+              width: 25,
+              height: 25,
               'assets/icon.png',
             ),
-            const Text(
+            Text(
               'My basket',
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
+              style: GoogleFonts.darkerGrotesque(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
                 color: ColorStyle.textColor,
               ),
             ),

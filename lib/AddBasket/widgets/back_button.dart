@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class CustomBackButton extends StatelessWidget {
-   CustomBackButton({ required this.onPressed,
+  CustomBackButton({
+    required this.onPressed,
     super.key,
   });
-   void Function()? onPressed;
+  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,11 +21,11 @@ class CustomBackButton extends StatelessWidget {
           ),
           icon: Image.asset('assets/arrow.png'),
           onPressed: onPressed,
-          label: const Text(
+          label: Text(
             'Go back',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
+            style: GoogleFonts.darkerGrotesque(
+              fontSize: 19,
+              fontWeight: FontWeight.w500,
               color: ColorStyle.textColor,
             ),
           ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:fruit_hub/models/food_model.dart';
-import 'package:fruit_hub/Home/widgets/price_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:fruit_hub/AddBasket/add_basket_screen.dart';
 
 // ignore: must_be_immutable
 class CustomFoodCard extends StatelessWidget {
@@ -14,61 +15,80 @@ class CustomFoodCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 200,
-      child: Card(
-        elevation: 2,
-        color: cardModel?.cardColor ?? Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Stack(
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    width: 80,
-                    height: 80,
-                    cardModel!.foodImg,
-                  ),
-                  Text(
-                    cardModel!.foodName,
-                    style: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w400,
-                      color: ColorStyle.textColor,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AddBasketScreen(
+              imgDetails: cardModel!.foodImg,
+              foodName: cardModel!.foodName,
+              price: cardModel!.price,
+            ),
+          ),
+        );
+      },
+      child: SizedBox(
+        width: 200,
+        child: Card(
+          elevation: 2,
+          color: cardModel?.cardColor ?? Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Stack(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      width: 80,
+                      height: 80,
+                      cardModel!.foodImg,
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        PriceWidget(
-                          price: cardModel!.price,
-                        ),
-                        Image.asset(
-                          width: 30,
-                          height: 30,
-                          'assets/plus.png',
-                        ),
-                      ],
+                    Text(
+                      cardModel!.foodName,
+                      style: GoogleFonts.darkerGrotesque(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: ColorStyle.textColor,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Positioned(
-                right: 0,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.favorite_outline,
-                    color: ColorStyle.primayColor,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            '₦ ${cardModel!.price}',
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xffF08626),
+                            ),
+                          ),
+                          Image.asset(
+                            width: 30,
+                            height: 30,
+                            'assets/plus.png',
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Positioned(
+                  right: 0,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.favorite_outline,
+                      color: ColorStyle.primayColor,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

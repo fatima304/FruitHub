@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({super.key});
@@ -16,10 +17,10 @@ class CustomSearchBar extends StatelessWidget {
         filled: true,
         fillColor: const Color(0xffF3F4F9),
         prefixIcon: Image.asset('assets/bi_search.png'),
-        hintStyle: const TextStyle(
-          fontSize: 16,
+        hintStyle: GoogleFonts.darkerGrotesque(
+          fontSize: 18,
           fontWeight: FontWeight.w500,
-          color: Color(0xff86869E),
+          color: const Color(0xff86869E),
         ),
       ),
     );

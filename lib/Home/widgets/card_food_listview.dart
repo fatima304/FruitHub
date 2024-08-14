@@ -4,8 +4,7 @@ import 'package:fruit_hub/Home/widgets/food_card.dart';
 
 // ignore: must_be_immutable
 class CardFoodListview extends StatelessWidget {
-  CardFoodListview();
-
+  CardFoodListview({super.key});
 
   List<CardModel> foodModel = [
     CardModel(
@@ -21,12 +20,12 @@ class CardFoodListview extends StatelessWidget {
         foodImg: 'assets/food3.png',
         foodName: 'Golden brown waffle'),
     CardModel(
-        price: '3,000',
+        price: '5,000',
         foodImg: 'assets/food4.png',
         foodName: 'Milk & pumpkin seeds'),
     CardModel(
-        price: '3,000',
-        foodImg: 'assets/food5.jpg',
+        price: '6,000',
+        foodImg: 'assets/food5.png',
         foodName: 'Berries & Muesli bowl'),
   ];
 

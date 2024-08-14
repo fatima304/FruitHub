@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class OutLineButton extends StatelessWidget {
-  const OutLineButton({
+   OutLineButton({
     super.key,
+    required this.onPressed,
     required this.textButton,
     required this.buttonSize,
   });
   final double buttonSize;
   final String textButton;
+  void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         side: const BorderSide(color: ColorStyle.primayColor),
         backgroundColor: Colors.white,
@@ -24,8 +28,8 @@ class OutLineButton extends StatelessWidget {
       ),
       child: Text(
         textButton,
-        style: const TextStyle(
-          fontSize: 16,
+        style: GoogleFonts.darkerGrotesque(
+          fontSize: 19.5,
           fontWeight: FontWeight.w500,
           color: ColorStyle.primayColor,
         ),
