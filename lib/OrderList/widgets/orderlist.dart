@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/Helper/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../BottomSheet/widgets/bottom_sheet.dart';
+import '../../BottomSheet/bottom_sheet.dart';
 import 'package:fruit_hub/WelcomeScreen/widgets/button.dart';
-import 'package:fruit_hub/BottomSheet/widgets/pay_buttons.dart';
+import 'package:fruit_hub/BottomSheet/pay_buttons.dart';
 import 'package:fruit_hub/OrderList/widgets/order_listview.dart';
 
 class Orderlist extends StatelessWidget {

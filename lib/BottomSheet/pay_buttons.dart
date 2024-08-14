@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/BottomSheet/widgets/bottom_sheet.dart';
-import 'package:fruit_hub/BottomSheet/widgets/card_details.dart';
+import 'package:fruit_hub/BottomSheet/bottom_sheet.dart';
+import 'package:fruit_hub/BottomSheet/card_details.dart';
 import 'package:fruit_hub/Complete/complete_screen.dart';
 import 'package:fruit_hub/Complete/widgets/outline_button.dart';
 

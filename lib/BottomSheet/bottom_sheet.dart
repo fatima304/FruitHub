@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/BottomSheet/widgets/bottom_sheet_details.dart';
+import 'package:fruit_hub/BottomSheet/bottom_sheet_details.dart';
 
 void showDeliveryBottomSheet(
   BuildContext context, {
