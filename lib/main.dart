@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/AuthScreen/auth.dart';
+import 'package:fruit_hub/features/AuthScreen/auth.dart';
 
 void main() {
   runApp(
