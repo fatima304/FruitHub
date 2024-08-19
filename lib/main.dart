@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/AuthScreen/auth.dart';
+import 'package:fruit_hub/features/SplashScreen/screens/splashscreen.dart';
 
 void main() {
   runApp(
@@ -20,7 +20,7 @@ class FruitHub extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const AuthScreen(),
+      home: const SplashScreen(),
     );
   }
 }

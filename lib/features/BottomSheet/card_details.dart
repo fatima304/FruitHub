@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/AuthScreen/widgets/shared_widget.dart';
+import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/Complete/complete_screen.dart';
 import 'package:fruit_hub/features/Complete/widgets/outline_button.dart';
-import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:fruit_hub/features/AuthScreen/widgets/shared_widget.dart';
 
 class CardDetails extends StatelessWidget {
   const CardDetails({super.key});

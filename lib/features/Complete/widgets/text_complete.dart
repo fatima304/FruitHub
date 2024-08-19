@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:fruit_hub/features/Helper/constant.dart';
 
 class TextComplete extends StatelessWidget {
   const TextComplete({super.key});

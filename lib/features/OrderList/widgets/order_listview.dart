@@ -35,7 +35,7 @@ class OrderListview extends StatelessWidget {
         ),
         OrderListTile(
           padding: 24,
-          img: 'assets/food7.png',
+          img: 'assets/3.png',
           imgColor: Color(0xffFEF0F0),
           subTitle: '2packs',
           title: 'Tropical fruit salad',

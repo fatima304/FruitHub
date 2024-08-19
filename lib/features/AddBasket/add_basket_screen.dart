@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/AddBasket/widgets/details_section.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/image_section.dart';
+import 'package:fruit_hub/features/AddBasket/widgets/details_section.dart';
 
 class AddBasketScreen extends StatelessWidget {
   const AddBasketScreen({

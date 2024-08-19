@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/food_amount.dart';
-import 'package:fruit_hub/features/AddBasket/widgets/ingredient_section.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/order_section.dart';
+import 'package:fruit_hub/features/AddBasket/widgets/ingredient_section.dart';
 
 class DetailsSection extends StatelessWidget {
   const DetailsSection({
@@ -10,6 +10,7 @@ class DetailsSection extends StatelessWidget {
     required this.foodName,
     required this.ingredient,
   });
+
   final String price;
   final String foodName;
   final String ingredient;
@@ -37,7 +38,9 @@ class DetailsSection extends StatelessWidget {
           const Divider(
             color: Color(0xffF3F3F3),
           ),
-           IngredientSection(ingredient: ingredient,),
+          IngredientSection(
+            ingredient: ingredient,
+          ),
           const Divider(
             color: Color(0xffF3F3F3),
           ),

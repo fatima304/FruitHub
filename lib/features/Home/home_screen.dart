@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/Home/widgets/custom_appbar.dart';
-import 'package:fruit_hub/features/Home/widgets/food_category_tab_view.dart';
 import 'package:fruit_hub/features/Home/widgets/header_section.dart';
 import 'package:fruit_hub/features/Home/widgets/recommend_section.dart';
+import 'package:fruit_hub/features/Home/widgets/food_category_tab_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.enteredText});
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              HeaderSection(enteredText: enteredText),
+              HeaderSection(name: enteredText),
               const SizedBox(
                 height: 25,
               ),
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              FoodCategoryTabView(),
+              const FoodCategoryTabView(),
             ],
           ),
         ),

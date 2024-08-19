@@ -6,7 +6,6 @@ import 'package:fruit_hub/features/AuthScreen/widgets/shared_widget.dart';
 class SmallContainerOrder extends StatelessWidget {
   SmallContainerOrder({super.key});
 
-  // Create a TextEditingController to manage the text field input
   final TextEditingController _textController = TextEditingController();
 
   @override
@@ -20,7 +19,6 @@ class SmallContainerOrder extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Pass the controller to the SharedWidget
           SharedWidget(
             text: 'What is your firstname?',
             hintText: 'Tony',

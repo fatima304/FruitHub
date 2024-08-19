@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/AuthScreen/auth.dart';
 import 'package:fruit_hub/features/WelcomeScreen/widgets/button.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SmallContainer extends StatelessWidget {
   const SmallContainer({

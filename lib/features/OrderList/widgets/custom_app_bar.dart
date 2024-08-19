@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/back_button.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CustomBar extends StatelessWidget {
   const CustomBar({super.key, required this.textBar});

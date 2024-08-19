@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/AuthScreen/widgets/textfield.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SharedWidget extends StatelessWidget {
   const SharedWidget({
     super.key,
     required this.text,
     required this.hintText,
-     this.textController, 
+    this.textController,
   });
 
   final String text;

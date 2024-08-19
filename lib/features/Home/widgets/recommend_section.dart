@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/Home/widgets/card_food_listview.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 class RecommendSection extends StatelessWidget {
   const RecommendSection({super.key});
 
@@ -24,7 +23,7 @@ class RecommendSection extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          CardFoodListview(),
+          const CardFoodListview(),
         ],
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:fruit_hub/features/Home/models/food_data.dart';
+import 'package:fruit_hub/models/food_data.dart';
+import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/Home/widgets/food_card.dart';
 
 class FoodCategoryTabView extends StatelessWidget {
@@ -12,7 +12,6 @@ class FoodCategoryTabView extends StatelessWidget {
     return DefaultTabController(
       length: categories.length,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TabBar(
             dividerHeight: 0,
@@ -28,8 +27,8 @@ class FoodCategoryTabView extends StatelessWidget {
             ),
             unselectedLabelColor: Colors.grey,
             indicator: const UnderlineTabIndicator(
-              borderSide: BorderSide(color: ColorStyle.primayColor, width: 2.0),
-              insets: EdgeInsets.symmetric(horizontal: 16.0),
+              borderSide: BorderSide(color: ColorStyle.primayColor, width: 2),
+              insets: EdgeInsets.symmetric(horizontal: 20),
             ),
             tabs: categories.map((category) {
               return Tab(
@@ -43,15 +42,14 @@ class FoodCategoryTabView extends StatelessWidget {
             height: 200,
             child: TabBarView(
               children: categories.map((category) {
-                // ignore: unused_local_variable
                 int index = categories.indexOf(category);
                 return SizedBox(
                   height: 220,
                   child: ListView.builder(
-                    itemCount: foodData[0].length,
+                    itemCount: foodData[index].length,
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return CustomFoodCard(cardModel: foodData[0][index]);
+                    itemBuilder: (context, item) {
+                      return CustomFoodCard(cardModel: foodData[index][item]);
                     },
                   ),
                 );

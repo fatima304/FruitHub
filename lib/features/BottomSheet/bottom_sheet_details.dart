@@ -11,8 +11,8 @@ class BottomSheetDetails extends StatelessWidget {
     required this.bottomWidget,
   });
   final String text1;
-  final String hintText1;
   final String text2;
+  final String hintText1;
   final String hintText2;
 
   final Widget bottomWidget;

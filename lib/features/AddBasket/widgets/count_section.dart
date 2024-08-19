@@ -1,26 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:fruit_hub/features/Helper/constant.dart';
 
-class CountSection extends StatelessWidget {
+class CountSection extends StatefulWidget {
   const CountSection({
     super.key,
   });
 
+  @override
+  State<CountSection> createState() => _CountSectionState();
+}
+
+int counter = 1;
+
+class _CountSectionState extends State<CountSection> {
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            counter--;
+            if (counter < 1) {
+              counter = 1;
+            }
+            setState(() {});
+          },
           child: Image.asset('assets/sub.png'),
         ),
         const SizedBox(
           width: 20,
         ),
         Text(
-          '1',
+          '$counter',
           style: GoogleFonts.darkerGrotesque(
             fontSize: 30,
             fontWeight: FontWeight.w500,
@@ -31,7 +44,10 @@ class CountSection extends StatelessWidget {
           width: 20,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            counter++;
+            setState(() {});
+          },
           child: Image.asset('assets/add.png'),
         ),
       ],

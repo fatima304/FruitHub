@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
-import 'package:fruit_hub/features/models/food_model.dart';
+import 'package:fruit_hub/models/food_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/AddBasket/add_basket_screen.dart';
 

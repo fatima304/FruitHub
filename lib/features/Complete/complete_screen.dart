@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/Complete/widgets/outline_button.dart';
-import 'package:fruit_hub/features/Complete/widgets/text_complete.dart';
 import 'package:fruit_hub/features/TrackOrder/track_screen.dart';
 import 'package:fruit_hub/features/WelcomeScreen/widgets/button.dart';
+import 'package:fruit_hub/features/Complete/widgets/text_complete.dart';
+import 'package:fruit_hub/features/Complete/widgets/outline_button.dart';
 
 class CompleteScreen extends StatelessWidget {
   const CompleteScreen({super.key});
