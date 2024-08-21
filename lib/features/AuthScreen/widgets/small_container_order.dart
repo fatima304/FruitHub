@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/Home/home_screen.dart';
 import 'package:fruit_hub/features/WelcomeScreen/widgets/button.dart';
 import 'package:fruit_hub/features/AuthScreen/widgets/shared_widget.dart';
@@ -12,8 +13,8 @@ class SmallContainerOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(
-        top: 56,
+      padding: EdgeInsets.only(
+        top: 56.h,
       ),
       color: Colors.white,
       child: Column(
@@ -24,13 +25,13 @@ class SmallContainerOrder extends StatelessWidget {
             hintText: 'Tony',
             textController: _textController,
           ),
-          const SizedBox(
-            height: 50,
+          SizedBox(
+            height: 50.h,
           ),
           Align(
             alignment: Alignment.center,
             child: Button(
-              buttonSize: 350,
+              buttonSize: 327,
               textButton: 'Start Ordering',
               onPressed: () {
                 Navigator.push(

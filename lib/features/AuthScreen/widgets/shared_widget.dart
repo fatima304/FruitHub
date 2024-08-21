@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/AuthScreen/widgets/textfield.dart';
@@ -18,20 +19,20 @@ class SharedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding:  EdgeInsets.symmetric(horizontal: 24.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             text,
             style: GoogleFonts.darkerGrotesque(
-              fontSize: 22,
+              fontSize: 22.sp,
               fontWeight: FontWeight.w600,
               color: ColorStyle.textColor,
             ),
           ),
-          const SizedBox(
-            height: 15,
+           SizedBox(
+            height: 15.h,
           ),
           TextForm(
             controller: textController,

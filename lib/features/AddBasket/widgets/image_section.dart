@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/back_button.dart';
 
 class ImageSection extends StatelessWidget {
@@ -9,7 +10,7 @@ class ImageSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 64, left: 24, right: 24, bottom: 10),
+      padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 20.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -23,8 +24,8 @@ class ImageSection extends StatelessWidget {
               width: double.infinity,
               color: const Color(0xffFFA451),
               child: Image.asset(
-                width: 176,
-                height: 176,
+                width: 176.w,
+                height: 176.h,
                 imgDetails,
               ),
             ),

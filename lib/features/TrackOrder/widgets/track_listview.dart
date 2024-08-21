@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/OrderList/widgets/order_listtile.dart';
 
 // ignore: must_be_immutable
@@ -8,10 +9,10 @@ class TrackListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 32),
+      padding: EdgeInsets.only(top: 32.h),
       child: Column(
-             mainAxisAlignment: MainAxisAlignment.start,
-   crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           OrderListTile(
             padding: 0,
@@ -21,7 +22,7 @@ class TrackListview extends StatelessWidget {
             trailingWidget: Image.asset('assets/done.png'),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: EdgeInsets.only(left: 50.w),
             child: Image.asset('assets/track.png'),
           ),
           OrderListTile(
@@ -32,7 +33,7 @@ class TrackListview extends StatelessWidget {
             trailingWidget: Image.asset('assets/done.png'),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: EdgeInsets.only(left: 50.w),
             child: Image.asset('assets/track.png'),
           ),
           OrderListTile(
@@ -44,17 +45,17 @@ class TrackListview extends StatelessWidget {
             trailingWidget: Image.asset('assets/call.png'),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: EdgeInsets.only(left: 50.w),
             child: Image.asset('assets/track.png'),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24),
+            padding: EdgeInsets.symmetric(horizontal: 24.w),
             child: Image.asset(
               'assets/map.png',
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 50),
+            padding: EdgeInsets.only(left: 50.w),
             child: Image.asset('assets/track.png'),
           ),
           OrderListTile(

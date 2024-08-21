@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomBackButton extends StatelessWidget {
@@ -15,8 +16,8 @@ class CustomBackButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         ElevatedButton.icon(
-          style: const ButtonStyle(
-            fixedSize: WidgetStatePropertyAll(Size(120, 35)),
+          style:  ButtonStyle(
+            fixedSize: WidgetStatePropertyAll(Size(120.w, 35.h)),
             backgroundColor: WidgetStatePropertyAll(Colors.white),
           ),
           icon: Image.asset('assets/arrow.png'),
@@ -24,7 +25,7 @@ class CustomBackButton extends StatelessWidget {
           label: Text(
             'Go back',
             style: GoogleFonts.darkerGrotesque(
-              fontSize: 19,
+              fontSize: 19.sp,
               fontWeight: FontWeight.w500,
               color: ColorStyle.textColor,
             ),

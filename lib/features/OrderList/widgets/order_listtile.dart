@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class OrderListTile extends StatelessWidget {
@@ -27,26 +28,26 @@ class OrderListTile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: padding),
+          padding: EdgeInsets.only(top: padding.h),
           child: ListTile(
             leading: Container(
-              width: 65,
-              height: 90,
+              width: 65.w,
+              height: 90.h,
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: imgColor,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
               child: Image.asset(
                 img,
-                width: 40,
-                height: 40,
+                width: 40.w,
+                height: 40.h,
               ),
             ),
             title: Text(
               title,
               style: GoogleFonts.darkerGrotesque(
-                fontSize: 20,
+                fontSize: 20.sp,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
               ),
@@ -55,17 +56,17 @@ class OrderListTile extends StatelessWidget {
                 ? Text(
                     subTitle!,
                     style: GoogleFonts.darkerGrotesque(
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
                     ),
                   )
                 : null,
             trailing: trailingWidget ??
-                const Text(
+                 Text(
                   '₦ 20,000',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 17.sp,
                     fontWeight: FontWeight.w400,
                     color: ColorStyle.textColor,
                   ),

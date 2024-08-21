@@ -18,20 +18,20 @@ class CompleteScreen extends StatelessWidget {
             Image.asset('assets/complete.png'),
             const TextComplete(),
             Button(
-                textButton: 'Track order',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const TrackOrderScreen(),
-                    ),
-                  );
-                },
-                buttonSize: 155),
+              textButton: 'Track order',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TrackOrderScreen(),
+                  ),
+                );
+              },
+            ),
             OutLineButton(
-                textButton: 'Continue shopping',
-                buttonSize: 190,
-                onPressed: () {}),
+              textButton: 'Continue shopping',
+              onPressed: () {},
+            ),
           ],
         ),
       ),

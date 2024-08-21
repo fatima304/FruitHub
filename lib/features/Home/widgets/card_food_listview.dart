@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/models/food_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/Home/widgets/food_card.dart';
 
 // ignore: must_be_immutable
@@ -8,7 +9,7 @@ class CardFoodListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 220,
+      height: 220.h,
       child: ListView.builder(
         itemCount: foodModel.length,
         scrollDirection: Axis.horizontal,

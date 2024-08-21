@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextComplete extends StatelessWidget {
   const TextComplete({super.key});
@@ -13,18 +14,18 @@ class TextComplete extends StatelessWidget {
         Text(
           'Congratulations!!!',
           style: GoogleFonts.darkerGrotesque(
-            fontSize: 32,
+            fontSize: 32.sp,
             fontWeight: FontWeight.w600,
             color: ColorStyle.textColor,
           ),
         ),
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: 20.h,
         ),
         Text(
           'Your order have been taken and',
           style: GoogleFonts.darkerGrotesque(
-            fontSize: 20,
+            fontSize: 20.sp,
             fontWeight: FontWeight.w500,
             color: ColorStyle.textColor,
           ),
@@ -32,7 +33,7 @@ class TextComplete extends StatelessWidget {
         Text(
           'is being attended to',
           style: GoogleFonts.darkerGrotesque(
-            fontSize: 20,
+            fontSize: 20.sp,
             fontWeight: FontWeight.w500,
             color: ColorStyle.textColor,
           ),

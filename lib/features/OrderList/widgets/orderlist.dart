@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../BottomSheet/bottom_sheet.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/BottomSheet/pay_buttons.dart';
 import 'package:fruit_hub/features/WelcomeScreen/widgets/button.dart';
 import 'package:fruit_hub/features/OrderList/widgets/order_listview.dart';
@@ -22,7 +23,7 @@ class Orderlist extends StatelessWidget {
         children: [
           const OrderListview(),
           Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24, bottom: 24),
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -32,15 +33,15 @@ class Orderlist extends StatelessWidget {
                     Text(
                       'Total',
                       style: GoogleFonts.darkerGrotesque(
-                        fontSize: 23,
+                        fontSize: 23.sp,
                         fontWeight: FontWeight.w600,
                         color: ColorStyle.textColor,
                       ),
                     ),
-                    const Text(
+                    Text(
                       '₦ 60,000',
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 22.sp,
                         fontWeight: FontWeight.w400,
                         color: ColorStyle.textColor,
                       ),
@@ -57,7 +58,6 @@ class Orderlist extends StatelessWidget {
                         hintText2: '09090605708',
                         bottomWidget: const PayButtons());
                   },
-                  buttonSize: 200,
                 ),
               ],
             ),

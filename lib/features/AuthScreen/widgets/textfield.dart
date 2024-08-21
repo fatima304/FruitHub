@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 
@@ -22,22 +23,22 @@ class TextForm extends StatelessWidget {
         filled: true,
         fillColor: const Color(0xffF3F1F1),
         hintStyle: GoogleFonts.darkerGrotesque(
-          fontSize: 21,
+          fontSize: 21.sp,
           color: const Color(0xffC2BDBD),
           fontWeight: FontWeight.w500,
         ),
         border: OutlineInputBorder(
           borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: ColorStyle.primayColor,
           ),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         contentPadding:
-            const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+             EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
       ),
     );
   }

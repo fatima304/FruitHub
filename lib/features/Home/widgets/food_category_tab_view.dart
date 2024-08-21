@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/models/food_data.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/Home/widgets/food_card.dart';
 
 class FoodCategoryTabView extends StatelessWidget {
@@ -18,17 +19,17 @@ class FoodCategoryTabView extends StatelessWidget {
             isScrollable: true,
             labelColor: ColorStyle.textColor,
             labelStyle: GoogleFonts.darkerGrotesque(
-              fontSize: 24,
+              fontSize: 24.sp,
               fontWeight: FontWeight.w600,
             ),
             unselectedLabelStyle: GoogleFonts.darkerGrotesque(
-              fontSize: 17,
+              fontSize: 17.sp,
               fontWeight: FontWeight.w500,
             ),
             unselectedLabelColor: Colors.grey,
-            indicator: const UnderlineTabIndicator(
-              borderSide: BorderSide(color: ColorStyle.primayColor, width: 2),
-              insets: EdgeInsets.symmetric(horizontal: 20),
+            indicator: UnderlineTabIndicator(
+              borderSide: BorderSide(color: ColorStyle.primayColor, width: 2.w),
+              insets: EdgeInsets.symmetric(horizontal: 20.w),
             ),
             tabs: categories.map((category) {
               return Tab(
@@ -39,12 +40,12 @@ class FoodCategoryTabView extends StatelessWidget {
             }).toList(),
           ),
           SizedBox(
-            height: 200,
+            height: 200.h,
             child: TabBarView(
               children: categories.map((category) {
                 int index = categories.indexOf(category);
                 return SizedBox(
-                  height: 220,
+                  height: 220.h,
                   child: ListView.builder(
                     itemCount: foodData[index].length,
                     scrollDirection: Axis.horizontal,

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Button extends StatelessWidget {
   const Button({
     super.key,
-    required this.textButton,
-    required this.onPressed,
     this.buttonSize,
+    required this.onPressed,
+    required this.textButton,
   });
   final double? buttonSize;
   final String textButton;
@@ -21,14 +22,14 @@ class Button extends StatelessWidget {
           0xffFFA451,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
-        fixedSize: Size(buttonSize!, 56),
+        fixedSize: Size(buttonSize ?? 220.w, 56.h),
       ),
       child: Text(
         textButton,
         style: GoogleFonts.darkerGrotesque(
-          fontSize: 21,
+          fontSize: 21.sp,
           fontWeight: FontWeight.w500,
           color: Colors.white,
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:fruit_hub/features/Helper/constant.dart';import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:fruit_hub/features/Home/widgets/search_bar.dart';
 class HeaderSection extends StatelessWidget {
   const HeaderSection({super.key, required this.name});
@@ -18,7 +19,7 @@ class HeaderSection extends StatelessWidget {
               TextSpan(
                 text: 'Hello $name, ',
                 style: GoogleFonts.darkerGrotesque(
-                  fontSize: 22,
+                  fontSize: 22.sp,
                   fontWeight: FontWeight.w600,
                   color: ColorStyle.textColor,
                 ),
@@ -26,7 +27,7 @@ class HeaderSection extends StatelessWidget {
               TextSpan(
                 text: 'What fruit salad\ncombo do you want today?',
                 style: GoogleFonts.darkerGrotesque(
-                  fontSize: 23,
+                  fontSize: 23.sp,
                   fontWeight: FontWeight.w700,
                   color: ColorStyle.textColor,
                 ),
@@ -34,19 +35,19 @@ class HeaderSection extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: 20.h,
         ),
         Row(
           children: [
             const Flexible(
               child: CustomSearchBar(),
             ),
-            const SizedBox(width: 10),
+             SizedBox(width: 10.w),
             Image.asset(
               'assets/setting.png',
-              width: 26,
-              height: 17,
+              width: 26.w,
+              height: 17.h,
             ),
           ],
         ),

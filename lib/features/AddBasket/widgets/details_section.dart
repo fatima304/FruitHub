@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/food_amount.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/order_section.dart';
 import 'package:fruit_hub/features/AddBasket/widgets/ingredient_section.dart';
@@ -18,18 +19,18 @@ class DetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 24, left: 24, right: 24, bottom: 20),
+      padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
       width: double.infinity,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(16),
-          topRight: Radius.circular(16),
+          topLeft: Radius.circular(16.r),
+          topRight: Radius.circular(16.r),
         ),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FoodAmount(
             price: price,

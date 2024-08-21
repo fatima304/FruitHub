@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class OutLineButton extends StatelessWidget {
-   OutLineButton({
+  OutLineButton({
     super.key,
     required this.onPressed,
     required this.textButton,
-    required this.buttonSize,
   });
-  final double buttonSize;
   final String textButton;
   void Function() onPressed;
 
@@ -22,14 +21,14 @@ class OutLineButton extends StatelessWidget {
         side: const BorderSide(color: ColorStyle.primayColor),
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
-        fixedSize: Size(buttonSize, 56),
+        fixedSize: Size(150.w, 56.h),
       ),
       child: Text(
         textButton,
         style: GoogleFonts.darkerGrotesque(
-          fontSize: 19.5,
+          fontSize: 14.sp,
           fontWeight: FontWeight.w500,
           color: ColorStyle.primayColor,
         ),

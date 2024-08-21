@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/Home/widgets/custom_appbar.dart';
 import 'package:fruit_hub/features/Home/widgets/header_section.dart';
 import 'package:fruit_hub/features/Home/widgets/recommend_section.dart';
@@ -15,21 +16,20 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xfff8f8f8),
       body: SingleChildScrollView(
         child: Padding(
-          padding:
-              const EdgeInsets.only(left: 12, right: 12, top: 45, bottom: 15),
+          padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 20.h),
           child: Column(
             children: [
               const CustomAppBar(),
-              const SizedBox(
-                height: 15,
+              SizedBox(
+                height: 10.h,
               ),
               HeaderSection(name: enteredText),
-              const SizedBox(
-                height: 25,
+              SizedBox(
+                height: 20.h,
               ),
               const RecommendSection(),
-              const SizedBox(
-                height: 15,
+              SizedBox(
+                height: 5.h,
               ),
               const FoodCategoryTabView(),
             ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({super.key});
@@ -10,7 +11,7 @@ class CustomSearchBar extends StatelessWidget {
       cursorColor: Colors.black,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.w),
           borderSide: BorderSide.none,
         ),
         hintText: 'Search for fruit salad combos',
@@ -18,7 +19,7 @@ class CustomSearchBar extends StatelessWidget {
         fillColor: const Color(0xffF3F4F9),
         prefixIcon: Image.asset('assets/bi_search.png'),
         hintStyle: GoogleFonts.darkerGrotesque(
-          fontSize: 18,
+          fontSize: 18.sp,
           fontWeight: FontWeight.w500,
           color: const Color(0xff86869E),
         ),

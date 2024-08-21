@@ -30,7 +30,11 @@ class AddBasketScreen extends StatelessWidget {
           ),
           Expanded(
             flex: 5,
-            child: DetailsSection(price: price, foodName: foodName,ingredient: ingredient,),
+            child: DetailsSection(
+              price: price,
+              foodName: foodName,
+              ingredient: ingredient,
+            ),
           ),
         ],
       ),

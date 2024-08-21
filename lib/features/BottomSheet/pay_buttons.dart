@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/BottomSheet/bottom_sheet.dart';
 import 'package:fruit_hub/features/BottomSheet/card_details.dart';
 import 'package:fruit_hub/features/Complete/complete_screen.dart';
@@ -10,13 +11,12 @@ class PayButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 24, right: 24, bottom: 24),
+            padding:  EdgeInsets.symmetric(horizontal: 24.w,vertical: 20.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           OutLineButton(
             textButton: 'Pay on delivery',
-            buttonSize: 160,
             onPressed: () {
               Navigator.push(
                 context,
@@ -28,7 +28,6 @@ class PayButtons extends StatelessWidget {
           ),
           OutLineButton(
             textButton: 'Pay with Card',
-            buttonSize: 150,
             onPressed: () {
               showDeliveryBottomSheet(
                 context,

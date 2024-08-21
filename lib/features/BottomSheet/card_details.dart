@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/Complete/complete_screen.dart';
 import 'package:fruit_hub/features/Complete/widgets/outline_button.dart';
@@ -12,16 +13,16 @@ class CardDetails extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Row(
+        Row(
           children: [
-            Expanded(
+            const Expanded(
               child: SharedWidget(
                 text: 'Date',
                 hintText: '10/30',
               ),
             ),
-            SizedBox(width: 16),
-            Expanded(
+            SizedBox(width: 16.w),
+            const Expanded(
               child: SharedWidget(
                 text: 'CCV',
                 hintText: '123',
@@ -29,18 +30,18 @@ class CardDetails extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(
-          height: 15,
+        SizedBox(
+          height: 15.h,
         ),
         Container(
-          height: 90,
+          height: 90.h,
           width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 120, vertical: 22),
-          decoration: const BoxDecoration(
+          padding: EdgeInsets.symmetric(horizontal: 120.w, vertical: 22.h),
+          decoration: BoxDecoration(
             color: ColorStyle.primayColor,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(24),
-              topRight: Radius.circular(24),
+              topLeft: Radius.circular(24.r),
+              topRight: Radius.circular(24.r),
             ),
           ),
           child: OutLineButton(
@@ -53,7 +54,6 @@ class CardDetails extends StatelessWidget {
               );
             },
             textButton: 'Complete Order',
-            buttonSize: 120,
           ),
         ),
       ],

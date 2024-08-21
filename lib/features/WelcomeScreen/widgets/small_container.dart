@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 import 'package:fruit_hub/features/AuthScreen/auth.dart';
@@ -18,7 +19,7 @@ class SmallContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(top: 56, left: 24, right: 24),
+      padding: EdgeInsets.only(top: 56.h, left: 24.w, right: 24.w),
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,29 +27,29 @@ class SmallContainer extends StatelessWidget {
           Text(
             text,
             style: GoogleFonts.darkerGrotesque(
-              fontSize: 23,
+              fontSize: 23.sp,
               color: ColorStyle.textColor,
               fontWeight: FontWeight.w600,
             ),
           ),
-          const SizedBox(
-            height: 5,
+          SizedBox(
+            height: 5.h,
           ),
           Text(
             'We deliver the best and freshest fruit salad in town. Order for a combo today!!!',
             style: GoogleFonts.darkerGrotesque(
-              fontSize: 19,
+              fontSize: 19.sp,
               color: const Color(0xff5d577e),
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(
-            height: 50,
+          SizedBox(
+            height: 50.h,
           ),
           Align(
             alignment: Alignment.center,
             child: Button(
-              buttonSize: 327,
+              buttonSize: 327.w,
               textButton: textButton,
               onPressed: () {
                 Navigator.push(

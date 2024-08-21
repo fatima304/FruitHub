@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
 
 class BigContainer extends StatelessWidget {
@@ -11,7 +12,7 @@ class BigContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(35),
+      padding:  EdgeInsets.all(35.w),
       width: double.infinity,
       color: ColorStyle.primayColor,
       child: Column(
@@ -21,24 +22,24 @@ class BigContainer extends StatelessWidget {
             alignment: Alignment.topRight,
             child: Image.asset(
               'assets/small.png',
-              width: 50,
-              height: 37.52,
+              width: 50.w,
+              height: 37.52.h,
             ),
           ),
           Flexible(
             child: Image.asset(
               mainImage,
-              width: 301,
-              height: 260,
+              width: 301.w,
+              height: 260.h,
             ),
           ),
-          const SizedBox(
-            height: 10,
+           SizedBox(
+            height: 10.h,
           ),
           Image.asset(
             'assets/ellipse.png',
-            width: 301,
-            height: 12,
+            width: 301.w,
+            height: 12.h,
           ),
         ],
       ),
