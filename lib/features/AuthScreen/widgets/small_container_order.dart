@@ -31,7 +31,7 @@ class SmallContainerOrder extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Button(
-              buttonSize: 327,
+              buttonSize: 327.w,
               textButton: 'Start Ordering',
               onPressed: () {
                 Navigator.push(

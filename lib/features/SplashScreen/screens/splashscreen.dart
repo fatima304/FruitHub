@@ -2,7 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fruit_hub/features/Helper/constant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit_hub/features/WelcomeScreen/welcome_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -26,30 +28,32 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Image.asset('assets/logo.png'),
-            const SizedBox(
-              height: 5,
+            SizedBox(
+              height: 5.h,
             ),
             Container(
-              height: 40,
-              width: 184,
-              decoration: const BoxDecoration(
+              padding: EdgeInsets.all(5.w),
+              height: 40.h,
+              width: 184.w,
+              decoration: BoxDecoration(
                 color: ColorStyle.primayColor,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15),
-                  bottomRight: Radius.circular(15),
+                  topLeft: Radius.circular(16.r),
+                  bottomRight: Radius.circular(16.r),
                 ),
               ),
               child: Center(
                 child: Text(
                   'Fruit Hub',
                   style: GoogleFonts.badScript(
-                    fontSize: 24,
+                    fontSize: 23.sp,
                     fontStyle: FontStyle.italic,
                     color: Colors.white,
                     fontWeight: FontWeight.w400,

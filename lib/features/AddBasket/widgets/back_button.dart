@@ -16,9 +16,9 @@ class CustomBackButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         ElevatedButton.icon(
-          style:  ButtonStyle(
+          style: ButtonStyle(
             fixedSize: WidgetStatePropertyAll(Size(120.w, 35.h)),
-            backgroundColor: WidgetStatePropertyAll(Colors.white),
+            backgroundColor: const WidgetStatePropertyAll(Colors.white),
           ),
           icon: Image.asset('assets/arrow.png'),
           onPressed: onPressed,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/features/WelcomeScreen/widgets/fix_body.dart';
 import 'package:fruit_hub/features/WelcomeScreen/widgets/big_container.dart';
 import 'package:fruit_hub/features/WelcomeScreen/widgets/small_container.dart';
 
@@ -8,34 +9,15 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: FixBody(),
-    );
-  }
-}
-
-class FixBody extends StatelessWidget {
-  const FixBody({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Expanded(
-          flex: 4,
-          child: BigContainer(
-            mainImage: 'assets/basket.png',
-          ),
+      body: FixBody(
+        widget1: BigContainer(
+          mainImage: 'assets/basket.png',
         ),
-        Expanded(
-          flex: 3,
-          child: SmallContainer(
-            textButton: 'Let\'s Continue',
-            text: 'Get The Freshest Fruit Salad Combo',
-          ),
+        widget2: SmallContainer(
+          textButton: 'Let\'s Continue',
+          text: 'Get The Freshest Fruit Salad Combo',
         ),
-      ],
+      ),
     );
   }
 }
